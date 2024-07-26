@@ -17,7 +17,7 @@ Commencez par lire ce post de blog : [blog post about the balloon color splash s
     ```bash
     python3 setup.py install
     ``` 
-5. DTéléchargez les poids pré-entraînés de COCO (mask_rcnn_coco.h5) depuis [releases page](https://github.com/matterport/Mask_RCNN/releases).
+5. Téléchargez les poids pré-entraînés de COCO (mask_rcnn_coco.h5) depuis [releases page](https://github.com/matterport/Mask_RCNN/releases).
 
 6. Lancez l'entraînement avec cette commande depuis le répertoire nematode. Nous spécifions que l'entraînement doit commencer à partir des poids pré-entraînés sur le jeu de données COCO.
    ```python
