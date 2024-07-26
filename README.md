@@ -2,22 +2,29 @@
 
 # Training on Your Own Dataset
 
-Start by reading this [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). It covers the process starting from annotating images to training to using the results in a sample application.
+Commencez par lire ce post de blog sur l'exemple de segmentation de couleur du ballon : [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). Il couvre le processus complet de création et de préparation d’un jeu de données à partir de zéro pour l’entraînement d’un modèle Mask R-CNN.
+
 
 ## Installation
-1. Clone the repository from the site [https://github.com/matterport/Mask_RCNN](Mask R-CNN)
-1. Clone this repository and put in the repository samples/
-2. Install dependencies
+1. Clonez le dépôt **Mask_RCNN** à partir du site [Mask R-CNN](https://github.com/matterport/Mask_RCNN)
+2. Clonez ce dépôt **nematode** et placez-le dans le répertoire **samples/**.
+3. Installez les dépendances :
    ```bash
    pip3 install -r requirements.txt
    ```
-3. Run setup from the repository root directory
+4. Exécutez l'installation depuis le répertoire **Mask_RCNN**
+
     ```bash
     python3 setup.py install
     ``` 
-3. Download pre-trained COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases).
-4. (Optional) To train or test on MS COCO install `pycocotools` from one of these repos. They are forks of the original pycocotools with fixes for Python3 and Windows (the official repo doesn't seem to be active anymore).
+5. DTéléchargez les poids pré-entraînés de COCO (mask_rcnn_coco.h5) depuis [releases page](https://github.com/matterport/Mask_RCNN/releases).
 
-    * Linux: https://github.com/waleedka/coco
-    * Windows: https://github.com/philferriere/cocoapi.
-    You must have the Visual C++ 2015 build tools on your path (see the repo for additional details)
+6. Lancez l'entraînement avec cette commande depuis le répertoire nematode. Nous spécifions que l'entraînement doit commencer à partir des poids pré-entraînés sur le jeu de données COCO.
+   ```python
+   python3 nematode.py train --dataset=nematode_dataset/ --model=coco
+   ```
+   Pour reprendre l'entraînement en cas d'interruption :
+
+   ```python
+   python3 nematode.py train --dataset=nematode_dataset/ --model=last
+   ```
