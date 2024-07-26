@@ -2,7 +2,7 @@
 
 # Training on Your Own Dataset
 
-Commencez par lire ce post de blog sur l'exemple de segmentation de couleur du ballon : [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). Il couvre le processus complet de création et de préparation d’un jeu de données à partir de zéro pour l’entraînement d’un modèle Mask R-CNN.
+Commencez par lire ce post de blog : [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). Il couvre le processus complet de création et de préparation d’un jeu de données à partir de zéro pour l’entraînement d’un modèle Mask R-CNN.
 
 
 ## Installation
